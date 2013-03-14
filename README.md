@@ -1,7 +1,7 @@
 # Sociocast JavaScript Library
 
 ##Overview
-Here you will find the source code for the Sociocast JavaScript Library, which provides clients with a JavaScript wrapper for the Sociocast REST API functionality. 
+Here you will find the source code for the Sociocast JavaScript Library, which provides clients with a JavaScript wrapper for the Sociocast REST API functionality. Please see the [Sociocast JavaScript Helper Library](https://github.com/sociocast/sociocast-js-helpers) for general supportive utilities and functions.
 
 ##Usage
 
