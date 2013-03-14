@@ -95,4 +95,17 @@ You can use a `*` to delete all the values for a specific key.
     
     sociocast.entity_attributes_del("91ea3bc9-e947", { "bluekai_segment" : "*" });
 
+###`sociocast.entity_attributes_modify`
+The `sociocast.entity_attributes_modify` wraps the Sociocast `/entity/attributes` REST API Call. Specifically, it allows you to add, set, and delete entity attributes in a single call.  The `sociocast.entity_attributes_modify` takes in two parameters:
+
+* `eid` - the entity ID for which the attributes are being modified.
+* `attribs` - the attributes being modified as a key-valued JavaScript Array.
+
+For instance:
+
+    sociocast.entity_attributes_modify("91ea3bc9-e947", {
+	    'set' : { "age" : "25-30" },
+	    'add' : { "zip_lived" : 10010 },
+	    'del' : { "bluekai_segment" : "Auto Intender" }
+    });
 
