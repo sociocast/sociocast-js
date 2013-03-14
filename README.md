@@ -15,7 +15,7 @@ To load the Sociocast JavaScript Library in our Sandbox enviroment, use the foll
 
 Additionally, you can grab this code from your [Sociocast Console](https://console.sociocast.com). 
 
-###Loading the Library in Sandbox Environment
+###Loading the Library in Production Environment
 
 To load the Sociocast JavaScript Library in our Production enviroment, use the following code:
 
