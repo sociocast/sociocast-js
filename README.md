@@ -22,7 +22,7 @@ To load the Sociocast JavaScript Library in our Production enviroment, use the f
 
 Additionally, you can grab this code from your [Sociocast Console](https://console.sociocast.com). 
 
-###LoadinInitializing the Library
+###Initializing the Library
 
 To initialize the library, call the `sociocast.init` with your client id, api key, and secret. You can retrieve these from your [Sociocast Console](https://console.sociocast.com). You can obtain an account by going to the [Sociocast website](http://www.sociocast.com).  
 
@@ -57,6 +57,15 @@ For example, to send a page view event with the Page Title and Page Path (using 
     attribs.page_title = sociocast_helper.getPageTitle();
     attribs.path_name = sociocast_helper.getPath();		
     sociocast.entity_observe("view", entityID, attribs);	
+
+
+###`sociocast.entity_attributes_add`
+The `sociocast.entity_attributes_add` wraps the Sociocast `/entity/attributes` REST API Call. Specifically, it allows you to add attributes to an entity. The `sociocast.entity_attributes_add` takes in two parameters:
+
+* `eid` - the entity ID for which the attributes are being added.
+* `attribs` - the attributes being added as a key-valued JavaScript Array.
+
+If the key already exists, the function adds the value to the existing set of values. 
 
 
 
