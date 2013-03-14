@@ -3,7 +3,7 @@
 ##Overview
 Here you will find the source code for the Sociocast JavaScript Library, which provides clients with a JavaScript wrapper for the Sociocast REST API functionality. Please see the [Sociocast JavaScript Helper Library](https://github.com/sociocast/sociocast-js-helpers) for general supportive utilities and functions.
 
-##Usage
+##Loading and Initializing the Library
 
 ###Loading the Library in Sandbox Environment
 To load the Sociocast JavaScript Library in our Sandbox enviroment, use the following code:
@@ -22,7 +22,7 @@ To load the Sociocast JavaScript Library in our Production enviroment, use the f
 
 Additionally, you can grab this code from your [Sociocast Console](https://console.sociocast.com). 
 
-###Initializing the Library
+###LoadinInitializing the Library
 
 To initialize the library, call the `sociocast.init` with your client id, api key, and secret. You can retrieve these from your [Sociocast Console](https://console.sociocast.com). You can obtain an account by going to the [Sociocast website](http://www.sociocast.com).  
 
@@ -37,3 +37,27 @@ To initialize the library, call the `sociocast.init` with your client id, api ke
      sociocast.init(**YOUR_CLIENT_ID**, **YOUR_API_KEY**, **YOUR_API_SECRET**);
      
 Additionally, you can grab your exact client code from your [Sociocast Console](https://console.sociocast.com).      
+
+##Methods
+
+###`sociocast.entity_observe`
+The `sociocast.entity_observe` method wraps the Sociocast `/entity/observe` REST API call. The `sociocast.entity_observe` call takes in three parameters:
+
+* `evt` - the event type for the entity observation (i.e. view, search, share, click, etc)
+* `eid` - the entity ID for which the event is being observed.
+* `obs` - the observation as a key-valued JavaScript Array. 
+
+The method is called as follows:
+
+    sociocast.entity_observe(evt, eid, obs);
+    
+For example, to send a page view event with the Page Title and Page Path (using the Sociocast JavaScript Helper Library):
+
+    var attribs = {};			
+    attribs.page_title = sociocast_helper.getPageTitle();
+    attribs.path_name = sociocast_helper.getPath();		
+    sociocast.entity_observe("view", entityID, attribs);	
+
+
+
+
