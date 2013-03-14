@@ -1,3 +1,5 @@
+![Alt text](/images/logo.png)
+
 # Sociocast JavaScript Library
 
 ##Overview
