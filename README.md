@@ -67,8 +67,32 @@ The `sociocast.entity_attributes_add` wraps the Sociocast `/entity/attributes` R
 * `eid` - the entity ID for which the attributes are being added.
 * `attribs` - the attributes being added as a key-valued JavaScript Array.
 
-If the key already exists, the function adds the value to the existing set of values. 
+If the key already exists, the function adds the value to the existing set of values. For instance: 
 
+    sociocast.entity_attributes_add("91ea3bc9-e947", { "zip_lived" : 10010 });
 
+###`sociocast.entity_attributes_set`
+The `sociocast.entity_attributes_set` wraps the Sociocast `/entity/attributes` REST API Call. Specifically, it allows you to set attributes on an entity. The `sociocast.entity_attributes_set` takes in two parameters:
+
+* `eid` - the entity ID for which the attributes are being set.
+* `attribs` - the attributes being set as a key-valued JavaScript Array.
+
+If the key already exists, the function replaces the value. For instance: 
+
+    sociocast.entity_attributes_set("91ea3bc9-e947", { "age" : "25-30" });
+
+###`sociocast.entity_attributes_del`
+The `sociocast.entity_attributes_del` wraps the Sociocast `/entity/attributes` REST API Call. Specifically, it allows you to delete attributes for an entity. The `sociocast.entity_attributes_del` takes in two parameters:
+
+* `eid` - the entity ID for which the attributes are being deleted.
+* `attribs` - the attributes being deleted as a key-valued JavaScript Array.
+
+For instance:
+
+    sociocast.entity_attributes_del("91ea3bc9-e947", { "zip_lived" : 10010 });
+    
+You can use a `*` to delete all the values for a specific key. 
+    
+    sociocast.entity_attributes_del("91ea3bc9-e947", { "bluekai_segment" : "*" });
 
 
