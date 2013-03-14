@@ -109,3 +109,13 @@ For instance:
 	    'del' : { "bluekai_segment" : "Auto Intender" }
     });
 
+###`sociocast.entity_profile`
+The `sociocast.entity_profile` wraps the Sociocast `/entity/profile` REST API Call. Specifically, it allows you to retrieve a profile on the entity. The method accepts 4 parameters:
+
+* `eid` - the entity ID for which the entity profile is being retrieved. 
+* `humread` - (boolean) whether to retrive human readable values for content classifications or Sociocast's internal identifiers. 
+* `attribs` - the attributes for which you want to retrieve values for the entity's profile. 
+* `settings` - a JavaScript array. 
+    * `success` - (Function) function to call upon success. 
+    * `error` - (Function) function to call upon error. 
+
