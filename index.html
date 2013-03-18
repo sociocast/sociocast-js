@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sociocast-js by sociocast</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Sociocast-js</h1>
+        <p>Sociocast JavaScript Library</p>
+
+        <p class="view"><a href="https://github.com/sociocast/sociocast-js">View the Project on GitHub <small>sociocast/sociocast-js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/sociocast/sociocast-js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sociocast/sociocast-js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sociocast/sociocast-js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="/images/logo.png" alt="Alt text"></p>
+
+<h1>Sociocast JavaScript Library</h1>
+
+<h2>Overview</h2>
+
+<p>Here you will find the source code for the Sociocast JavaScript Library, which provides clients with a JavaScript wrapper for the Sociocast REST API functionality. Please see the <a href="https://github.com/sociocast/sociocast-js-helpers">Sociocast JavaScript Helper Library</a> for general supportive utilities and functions.</p>
+
+<h2>Loading and Initializing the Library</h2>
+
+<h3>Loading the Library in Sandbox Environment</h3>
+
+<p>To load the Sociocast JavaScript Library in our Sandbox enviroment, use the following code:</p>
+
+<pre><code>// code to add to footer of your html document
+(function(a,b,c){function i(a){c[a]=function(){return c.is_loaded?_sociocast[a].apply(_sociocast,Array.prototype.slice.call(arguments,0)):(c.push([a].concat(Array.prototype.slice.call(arguments,0))),void 0)}}window.sociocast=c,c.is_loaded=!1;var f=function(a){for(var b=0;a.length&gt;b;b++)_sociocast[a[b].shift()].apply(_sociocast,a[b])},g=document.createElement("script"),h=["init","entity_observe","entity_attributes_add","entity_attributes_set","entity_attributes_del","entity_attributes_modify","entity_profile"];for(g.type="text/javascript",g.src=b,g.async=!0,g.onreadystatechange=g.onload=function(){var a=g.readyState;f.done||a&amp;&amp;!/loaded|complete/.test(a)||(f.done=!0,f(c),c.is_loaded=!0)},(document.body||head).appendChild(g),e=0;h.length&gt;e;e++)i(h[e])})(document,"http://api-sandbox.sociocast.com/1.0/js/sc.js",window.sociocast||[]);
+</code></pre>
+
+<p>Additionally, you can grab this code from your <a href="https://console.sociocast.com">Sociocast Console</a>. </p>
+
+<h3>Loading the Library in Production Environment</h3>
+
+<p>To load the Sociocast JavaScript Library in our Production enviroment, use the following code:</p>
+
+<pre><code>// code to add to footer of your html document
+(function(a,b,c){function i(a){c[a]=function(){return c.is_loaded?_sociocast[a].apply(_sociocast,Array.prototype.slice.call(arguments,0)):(c.push([a].concat(Array.prototype.slice.call(arguments,0))),void 0)}}window.sociocast=c,c.is_loaded=!1;var f=function(a){for(var b=0;a.length&gt;b;b++)_sociocast[a[b].shift()].apply(_sociocast,a[b])},g=document.createElement("script"),h=["init","entity_observe","entity_attributes_add","entity_attributes_set","entity_attributes_del","entity_attributes_modify","entity_profile"];for(g.type="text/javascript",g.src=b,g.async=!0,g.onreadystatechange=g.onload=function(){var a=g.readyState;f.done||a&amp;&amp;!/loaded|complete/.test(a)||(f.done=!0,f(c),c.is_loaded=!0)},(document.body||head).appendChild(g),e=0;h.length&gt;e;e++)i(h[e])})(document,"http://api-sandbox.sociocast.com/1.0/js/sc.js",window.sociocast||[]);
+</code></pre>
+
+<p>Additionally, you can grab this code from your <a href="https://console.sociocast.com">Sociocast Console</a>. </p>
+
+<h3>Initializing the Library</h3>
+
+<p>To initialize the library, call the <code>sociocast.init</code> with your client id, api key, and secret. You can retrieve these from your <a href="https://console.sociocast.com">Sociocast Console</a>. You can obtain an account by going to the <a href="http://www.sociocast.com">Sociocast website</a>.  </p>
+
+<pre><code>/**
+ * Intantiate the sociocast api client
+ *
+ * @param string client id
+ * @param string api client key
+ * @param string secret hash
+ *
+ */
+ sociocast.init(**YOUR_CLIENT_ID**, **YOUR_API_KEY**, **YOUR_API_SECRET**);
+</code></pre>
+
+<p>Additionally, you can grab your exact client code from your <a href="https://console.sociocast.com">Sociocast Console</a>.      </p>
+
+<h2>Methods</h2>
+
+<h3><code>sociocast.entity_observe</code></h3>
+
+<p>The <code>sociocast.entity_observe</code> method wraps the Sociocast <code>/entity/observe</code> REST API call. The <code>sociocast.entity_observe</code> call takes in three parameters:</p>
+
+<ul>
+<li>
+<code>evt</code> - the event type for the entity observation (i.e. view, search, share, click, etc)</li>
+<li>
+<code>eid</code> - the entity ID for which the event is being observed.</li>
+<li>
+<code>obs</code> - the observation as a key-valued JavaScript Array. </li>
+</ul><p>The method is called as follows:</p>
+
+<pre><code>sociocast.entity_observe(evt, eid, obs);
+</code></pre>
+
+<p>For example, to send a page view event with the Page Title and Page Path (using the Sociocast JavaScript Helper Library):</p>
+
+<pre><code>var attribs = {};           
+attribs.page_title = sociocast_helper.getPageTitle();
+attribs.path_name = sociocast_helper.getPath();     
+sociocast.entity_observe("view", entityID, attribs);    
+</code></pre>
+
+<h3><code>sociocast.entity_attributes_add</code></h3>
+
+<p>The <code>sociocast.entity_attributes_add</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to add attributes to an entity. The <code>sociocast.entity_attributes_add</code> takes in two parameters:</p>
+
+<ul>
+<li>
+<code>eid</code> - the entity ID for which the attributes are being added.</li>
+<li>
+<code>attribs</code> - the attributes being added as a key-valued JavaScript Array.</li>
+</ul><p>If the key already exists, the function adds the value to the existing set of values. For instance: </p>
+
+<pre><code>sociocast.entity_attributes_add("91ea3bc9-e947", { "zip_lived" : 10010 });
+</code></pre>
+
+<h3><code>sociocast.entity_attributes_set</code></h3>
+
+<p>The <code>sociocast.entity_attributes_set</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to set attributes on an entity. The <code>sociocast.entity_attributes_set</code> takes in two parameters:</p>
+
+<ul>
+<li>
+<code>eid</code> - the entity ID for which the attributes are being set.</li>
+<li>
+<code>attribs</code> - the attributes being set as a key-valued JavaScript Array.</li>
+</ul><p>If the key already exists, the function replaces the value. For instance: </p>
+
+<pre><code>sociocast.entity_attributes_set("91ea3bc9-e947", { "age" : "25-30" });
+</code></pre>
+
+<h3><code>sociocast.entity_attributes_del</code></h3>
+
+<p>The <code>sociocast.entity_attributes_del</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to delete attributes for an entity. The <code>sociocast.entity_attributes_del</code> takes in two parameters:</p>
+
+<ul>
+<li>
+<code>eid</code> - the entity ID for which the attributes are being deleted.</li>
+<li>
+<code>attribs</code> - the attributes being deleted as a key-valued JavaScript Array.</li>
+</ul><p>For instance:</p>
+
+<pre><code>sociocast.entity_attributes_del("91ea3bc9-e947", { "zip_lived" : 10010 });
+</code></pre>
+
+<p>You can use a <code>*</code> to delete all the values for a specific key. </p>
+
+<pre><code>sociocast.entity_attributes_del("91ea3bc9-e947", { "bluekai_segment" : "*" });
+</code></pre>
+
+<h3><code>sociocast.entity_attributes_modify</code></h3>
+
+<p>The <code>sociocast.entity_attributes_modify</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to add, set, and delete entity attributes in a single call.  The <code>sociocast.entity_attributes_modify</code> takes in two parameters:</p>
+
+<ul>
+<li>
+<code>eid</code> - the entity ID for which the attributes are being modified.</li>
+<li>
+<code>attribs</code> - the attributes being modified as a key-valued JavaScript Array.</li>
+</ul><p>For instance:</p>
+
+<pre><code>sociocast.entity_attributes_modify("91ea3bc9-e947", {
+    'set' : { "age" : "25-30" },
+    'add' : { "zip_lived" : 10010 },
+    'del' : { "bluekai_segment" : "Auto Intender" }
+});
+</code></pre>
+
+<h3><code>sociocast.entity_profile</code></h3>
+
+<p>The <code>sociocast.entity_profile</code> wraps the Sociocast <code>/entity/profile</code> REST API Call. Specifically, it allows you to retrieve a profile on the entity. The method accepts 4 parameters:</p>
+
+<ul>
+<li>
+<code>eid</code> - the entity ID for which the entity profile is being retrieved. </li>
+<li>
+<code>humread</code> - (boolean) whether to retrive human readable values for content classifications or Sociocast's internal identifiers. </li>
+<li>
+<code>attribs</code> - the attributes for which you want to retrieve values for the entity's profile. </li>
+<li>
+<code>settings</code> - a JavaScript array. 
+
+<ul>
+<li>
+<code>success</code> - (Function) function to call upon success. </li>
+<li>
+<code>error</code> - (Function) function to call upon error. </li>
+</ul>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sociocast">sociocast</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
