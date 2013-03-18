@@ -50,17 +50,15 @@
 		
       </header>
       <section>
-        <p><img src="/images/logo.png" alt="Alt text"></p>
+<h2>Sociocast JavaScript Library</h2>
 
-<h1>Sociocast JavaScript Library</h1>
-
-<h2>Overview</h2>
+<h3>Overview</h3>
 
 <p>Here you will find the source code for the Sociocast JavaScript Library, which provides clients with a JavaScript wrapper for the Sociocast REST API functionality. Please see the <a href="https://github.com/sociocast/sociocast-js-helpers">Sociocast JavaScript Helper Library</a> for general supportive utilities and functions.</p>
 
-<h2>Loading and Initializing the Library</h2>
+<h3>Loading and Initializing the Library</h3>
 
-<h3>Loading the Library in Sandbox Environment</h3>
+<h4>Loading the Library in Sandbox Environment</h4>
 
 <p>To load the Sociocast JavaScript Library in our Sandbox enviroment, use the following code:</p>
 
@@ -70,7 +68,7 @@
 
 <p>Additionally, you can grab this code from your <a href="https://console.sociocast.com">Sociocast Console</a>. </p>
 
-<h3>Loading the Library in Production Environment</h3>
+<h4>Loading the Library in Production Environment</h4>
 
 <p>To load the Sociocast JavaScript Library in our Production enviroment, use the following code:</p>
 
@@ -80,7 +78,7 @@
 
 <p>Additionally, you can grab this code from your <a href="https://console.sociocast.com">Sociocast Console</a>. </p>
 
-<h3>Initializing the Library</h3>
+<h4>Initializing the Library</h4>
 
 <p>To initialize the library, call the <code>sociocast.init</code> with your client id, api key, and secret. You can retrieve these from your <a href="https://console.sociocast.com">Sociocast Console</a>. You can obtain an account by going to the <a href="http://www.sociocast.com">Sociocast website</a>.  </p>
 
@@ -97,9 +95,9 @@
 
 <p>Additionally, you can grab your exact client code from your <a href="https://console.sociocast.com">Sociocast Console</a>.      </p>
 
-<h2>Methods</h2>
+<h3>Methods</h3>
 
-<h3><code>sociocast.entity_observe</code></h3>
+<h4><code>sociocast.entity_observe</code></h4>
 
 <p>The <code>sociocast.entity_observe</code> method wraps the Sociocast <code>/entity/observe</code> REST API call. The <code>sociocast.entity_observe</code> call takes in three parameters:</p>
 
@@ -123,7 +121,7 @@ attribs.path_name = sociocast_helper.getPath();
 sociocast.entity_observe("view", entityID, attribs);    
 </code></pre>
 
-<h3><code>sociocast.entity_attributes_add</code></h3>
+<h4><code>sociocast.entity_attributes_add</code></h4>
 
 <p>The <code>sociocast.entity_attributes_add</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to add attributes to an entity. The <code>sociocast.entity_attributes_add</code> takes in two parameters:</p>
 
@@ -137,7 +135,7 @@ sociocast.entity_observe("view", entityID, attribs);
 <pre><code>sociocast.entity_attributes_add("91ea3bc9-e947", { "zip_lived" : 10010 });
 </code></pre>
 
-<h3><code>sociocast.entity_attributes_set</code></h3>
+<h4><code>sociocast.entity_attributes_set</code></h4>
 
 <p>The <code>sociocast.entity_attributes_set</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to set attributes on an entity. The <code>sociocast.entity_attributes_set</code> takes in two parameters:</p>
 
@@ -151,7 +149,7 @@ sociocast.entity_observe("view", entityID, attribs);
 <pre><code>sociocast.entity_attributes_set("91ea3bc9-e947", { "age" : "25-30" });
 </code></pre>
 
-<h3><code>sociocast.entity_attributes_del</code></h3>
+<h4><code>sociocast.entity_attributes_del</code></h4>
 
 <p>The <code>sociocast.entity_attributes_del</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to delete attributes for an entity. The <code>sociocast.entity_attributes_del</code> takes in two parameters:</p>
 
@@ -170,7 +168,7 @@ sociocast.entity_observe("view", entityID, attribs);
 <pre><code>sociocast.entity_attributes_del("91ea3bc9-e947", { "bluekai_segment" : "*" });
 </code></pre>
 
-<h3><code>sociocast.entity_attributes_modify</code></h3>
+<h4><code>sociocast.entity_attributes_modify</code></h4>
 
 <p>The <code>sociocast.entity_attributes_modify</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to add, set, and delete entity attributes in a single call.  The <code>sociocast.entity_attributes_modify</code> takes in two parameters:</p>
 
@@ -188,7 +186,7 @@ sociocast.entity_observe("view", entityID, attribs);
 });
 </code></pre>
 
-<h3><code>sociocast.entity_profile</code></h3>
+<h4><code>sociocast.entity_profile</code></h4>
 
 <p>The <code>sociocast.entity_profile</code> wraps the Sociocast <code>/entity/profile</code> REST API Call. Specifically, it allows you to retrieve a profile on the entity. The method accepts 4 parameters:</p>
 
