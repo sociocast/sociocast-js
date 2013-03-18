@@ -26,13 +26,13 @@
 		<h4>Sociocast JavaScript Library Methods</h4>
 		<code><a href="#entity_observe">sociocast.entity_observe&nbsp;&raquo;</a></code>
         <br/>
-		<code><a href="#entity_attributes_add" target="_blank">sociocast.entity_attributes_add&nbsp;&raquo;</a></code>
+		<code><a href="#entity_attributes_add">sociocast.entity_attributes_add&nbsp;&raquo;</a></code>
         <br/>	
-		<code><a href="#entity_attributes_set" target="_blank">sociocast.entity_attributes_set&nbsp;&raquo;</a></code>
+		<code><a href="#entity_attributes_set">sociocast.entity_attributes_set&nbsp;&raquo;</a></code>
         <br/>	
-		<code><a href="#entity_attributes_del" target="_blank">sociocast.entity_attributes_del&nbsp;&raquo;</a></code>
+		<code><a href="#entity_attributes_del">sociocast.entity_attributes_del&nbsp;&raquo;</a></code>
         <br/>	        
-		<code><a href="#entity_attributes_modify" target="_blank">sociocast.entity_attributes_modify&nbsp;&raquo;</a></code>      
+		<code><a href="#entity_attributes_modify">sociocast.entity_attributes_modify&nbsp;&raquo;</a></code>      
         <br/>	        
 		<code><a href="#entity_profile" target="_blank">sociocast.entity_profile&nbsp;&raquo;</a></code>      		
 		<h4>Sociocast Libraries & SDKs</h4>
@@ -127,7 +127,7 @@ The following jsFiddle module show an example <code>sociocast.entity_observe(evt
 <iframe style="width: 100%; height: 300px;" src="http://jsfiddle.net/Sociocast/Ud6Zr/5/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </p>
 
-<h4><code>sociocast.entity_attributes_add</code></h4>
+<a name="entity_attributes_add"><h4><code>sociocast.entity_attributes_add</code></h4></a>
 
 <p>The <code>sociocast.entity_attributes_add</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to add attributes to an entity. The <code>sociocast.entity_attributes_add</code> takes in two parameters:</p>
 
@@ -141,7 +141,7 @@ The following jsFiddle module show an example <code>sociocast.entity_observe(evt
 <pre><code>sociocast.entity_attributes_add("91ea3bc9-e947", { "zip_lived" : 10010 });
 </code></pre>
 
-<h4><code>sociocast.entity_attributes_set</code></h4>
+<a name="entity_attributes_set"><h4><code>sociocast.entity_attributes_set</code></h4></a>
 
 <p>The <code>sociocast.entity_attributes_set</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to set attributes on an entity. The <code>sociocast.entity_attributes_set</code> takes in two parameters:</p>
 
@@ -155,7 +155,7 @@ The following jsFiddle module show an example <code>sociocast.entity_observe(evt
 <pre><code>sociocast.entity_attributes_set("91ea3bc9-e947", { "age" : "25-30" });
 </code></pre>
 
-<h4><code>sociocast.entity_attributes_del</code></h4>
+<a name="entity_attributes_del"><h4><code>sociocast.entity_attributes_del</code></h4></a>
 
 <p>The <code>sociocast.entity_attributes_del</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to delete attributes for an entity. The <code>sociocast.entity_attributes_del</code> takes in two parameters:</p>
 
@@ -174,7 +174,7 @@ The following jsFiddle module show an example <code>sociocast.entity_observe(evt
 <pre><code>sociocast.entity_attributes_del("91ea3bc9-e947", { "bluekai_segment" : "*" });
 </code></pre>
 
-<h4><code>sociocast.entity_attributes_modify</code></h4>
+<a name="entity_attributes_modify"><h4><code>sociocast.entity_attributes_modify</code></h4></a>
 
 <p>The <code>sociocast.entity_attributes_modify</code> wraps the Sociocast <code>/entity/attributes</code> REST API Call. Specifically, it allows you to add, set, and delete entity attributes in a single call.  The <code>sociocast.entity_attributes_modify</code> takes in two parameters:</p>
 
@@ -192,7 +192,7 @@ The following jsFiddle module show an example <code>sociocast.entity_observe(evt
 });
 </code></pre>
 
-<h4><code>sociocast.entity_profile</code></h4>
+<a name="entity_profile"><h4><code>sociocast.entity_profile</code></h4></a>
 
 <p>The <code>sociocast.entity_profile</code> wraps the Sociocast <code>/entity/profile</code> REST API Call. Specifically, it allows you to retrieve a profile on the entity. The method accepts 4 parameters:</p>
 
